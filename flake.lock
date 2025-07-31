@@ -1,0 +1,39 @@
+{
+  "nodes": {
+    "mcfly": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-8EyVz1NIddgxfcKpsWTlA+hru0piFjD9IE2otDbv7d0=",
+        "type": "file",
+        "url": "https://raw.githubusercontent.com/cc-tweaked/CC-Tweaked/refs/heads/mc-1.20.x/projects/core/src/test/resources/test-rom/mcfly.lua"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://raw.githubusercontent.com/cc-tweaked/CC-Tweaked/refs/heads/mc-1.20.x/projects/core/src/test/resources/test-rom/mcfly.lua"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1753975802,
+        "narHash": "sha256-AHkjsB4OcOH2y/liyphnm8mR3ZtNof0LfpRt6a0+YHE=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "27a63331a0ea950e07a21cde230129befa12702a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "mcfly": "mcfly",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
