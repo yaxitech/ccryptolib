@@ -1,4 +1,4 @@
-local expect   = require "cc.expect".expect
+local expect   = require "ccryptolib.internal.expect".expect
 local blake3   = require "ccryptolib.blake3"
 local chacha20 = require "ccryptolib.chacha20"
 local util     = require "ccryptolib.internal.util"

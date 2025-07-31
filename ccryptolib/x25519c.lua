@@ -1,4 +1,4 @@
-local expect = require "cc.expect".expect
+local expect = require "ccryptolib.internal.expect".expect
 local lassert = require "ccryptolib.internal.util".lassert
 local fq     = require "ccryptolib.internal.fq"
 local fp     = require "ccryptolib.internal.fp"

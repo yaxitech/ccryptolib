@@ -1,6 +1,6 @@
 --- The X25519 key exchange scheme.
 
-local expect = require "cc.expect".expect
+local expect = require "ccryptolib.internal.expect".expect
 local lassert = require "ccryptolib.internal.util".lassert
 local util = require "ccryptolib.internal.util"
 local c25 = require "ccryptolib.internal.curve25519"

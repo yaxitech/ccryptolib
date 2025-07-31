@@ -1,6 +1,6 @@
 --- The ChaCha20 stream cipher.
 
-local expect  = require "cc.expect".expect
+local expect  = require "ccryptolib.internal.expect".expect
 local lassert = require "ccryptolib.internal.util".lassert
 local packing = require "ccryptolib.internal.packing"
 
