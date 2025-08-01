@@ -8,6 +8,7 @@ local poly1305 = require "ccryptolib.poly1305"
 
 local p8x1, fmt8x1 = packing.compilePack("<I8")
 local u4x4, fmt4x4 = packing.compileUnpack("<I4I4I4I4")
+local bit32 = bit32 or require "ccryptolib.internal.numberlua".bit32
 local bxor = bit32.bxor
 
 --- Encrypts a message.

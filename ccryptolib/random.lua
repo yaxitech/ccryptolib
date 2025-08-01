@@ -8,8 +8,8 @@ local lassert = util.lassert
 -- Extract local context.
 local ctx = {
     "ccryptolib 2023-04-11T19:43Z random.lua initialization context",
-    os.epoch("utc"),
-    os.day(),
+    os.epoch and os.epoch("utc") or os.time() * 1000,
+    os.day and os.day() or 3,
     os.time(),
     math.random(0, 2 ^ 24 - 1),
     math.random(0, 2 ^ 24 - 1),

@@ -6,17 +6,19 @@ local packing = require "ccryptolib.internal.packing"
 
 local numberlua = require "ccryptolib.internal.numberlua"
 local bit32 = bit32 or numberlua.bit32
-local rol = numberlua.bit32.lrotate
-local shr = numberlua.bit32.rshift
-local bxor = bit32.bxor -- TODO
-local bnot = numberlua.bit32.bnot
-local band = numberlua.bit32.band
+local rol = bit32.lrotate
+local shr = bit32.rshift
+local bxor = bit32.bxor
+local bnot = bit32.bnot
+local band = bit32.band
 local unpack = unpack or table.unpack
 local p1x8, fmt1x8 = packing.compilePack(">I8")
 local p16x4, fmt16x4 = packing.compilePack(">I4I4I4I4I4I4I4I4I4I4I4I4I4I4I4I4")
 local u16x4 = packing.compileUnpack(fmt16x4)
 local p8x4, fmt8x4 = packing.compilePack(">I4I4I4I4I4I4I4I4")
 local u8x4 = packing.compileUnpack(fmt8x4)
+
+local unpack = unpack or table.unpack
 
 local function primes(n, exp)
     local out = {}
