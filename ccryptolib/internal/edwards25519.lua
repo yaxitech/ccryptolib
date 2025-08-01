@@ -1,5 +1,6 @@
 --- Point arithmetic on the Edwards25519 Edwards curve.
 
+local bit32 = require "ccryptolib.internal.numberlua".bit32
 local fp = require "ccryptolib.internal.fp"
 
 local unpack = unpack or table.unpack
