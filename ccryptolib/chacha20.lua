@@ -4,6 +4,7 @@ local expect  = require "ccryptolib.internal.expect".expect
 local lassert = require "ccryptolib.internal.util".lassert
 local packing = require "ccryptolib.internal.packing"
 
+local bit32 = require "ccryptolib.internal.numberlua".bit32
 local bxor = bit32.bxor
 local rol = bit32.lrotate
 local u8x4, fmt8x4 = packing.compileUnpack("<I4I4I4I4I4I4I4I4")
