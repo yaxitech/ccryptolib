@@ -6,6 +6,9 @@
 local util = require "spec.util"
 local aead = require "ccryptolib.aead"
 
+local compat = require "spec.compat"(assert)
+local expect = expect or compat.expect
+
 describe("aead.encrypt", function()
     it("validates arguments", function()
         local key = ("a"):rep(32)

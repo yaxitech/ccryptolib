@@ -6,6 +6,9 @@
 local util = require "spec.util"
 local x25519c = require "ccryptolib.x25519c"
 
+local compat = require "spec.compat"(assert)
+local expect = expect or compat.expect
+
 require "ccryptolib.random".init("mock initialization")
 
 local function exchange(sk, pk)

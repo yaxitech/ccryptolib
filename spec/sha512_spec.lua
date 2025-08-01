@@ -9,6 +9,10 @@ local sha512 = require "ccryptolib.internal.sha512"
 local shortMsg = require "spec.vec.sha512.short"
 local longMsg = require "spec.vec.sha512.long"
 
+local compat = require "spec.compat"(assert)
+local expect = expect or compat.expect
+local sleep = sleep or compat.sleep
+
 describe("sha512.digest", function()
     it("validates arguments", function()
         expect.error(sha512.digest, nil)

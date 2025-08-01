@@ -6,6 +6,9 @@
 local util = require "spec.util"
 local chacha20 = require "ccryptolib.chacha20"
 
+local compat = require "spec.compat"(assert)
+local expect = expect or compat.expect
+
 describe("chacha20.crypt", function()
     it("validates arguments", function()
         local key = ("a"):rep(32)

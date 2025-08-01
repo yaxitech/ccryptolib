@@ -7,6 +7,10 @@ local util = require "spec.util"
 local blake3 = require "ccryptolib.blake3"
 local vecs = require "spec.vec.blake3"
 
+local unpack = unpack or table.unpack
+local compat = require "spec.compat"(assert)
+local expect = expect or compat.expect
+
 local function mkInput(len)
     local out = {}
     for i = 1, len do out[i] = (i - 1) % 251 end

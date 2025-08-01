@@ -6,6 +6,9 @@
 local util = require "spec.util"
 local ed25519 = require "ccryptolib.ed25519"
 
+local compat = require "spec.compat"(assert)
+local expect = expect or compat.expect
+
 describe("ed25519.verify", function()
     it("passes the section 7.1 test 1", function()
         local sk = util.hexcat {
