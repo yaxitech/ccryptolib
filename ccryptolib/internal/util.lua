@@ -1,3 +1,5 @@
+local unpack = unpack or table.unpack
+
 local function lassert(val, err, level)
     if not val then error(err, level + 1) end
     return val
