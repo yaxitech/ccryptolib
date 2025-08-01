@@ -6,6 +6,9 @@
 local util = require "spec.util"
 local poly1305 = require "ccryptolib.poly1305"
 
+local compat = require "spec.compat"(assert)
+local expect = expect or compat.expect
+
 describe("poly1305.mac", function()
     it("validates arguments", function()
         local key = ("a"):rep(32)

@@ -9,6 +9,10 @@ local sha256 = require "ccryptolib.sha256"
 local shortMsg = require "spec.vec.sha256.short"
 local longMsg = require "spec.vec.sha256.long"
 
+local compat = require "spec.compat"(assert)
+local expect = expect or compat.expect
+local sleep = sleep or compat.sleep
+
 describe("sha256.digest", function()
     it("validates arguments", function()
         expect.error(sha256.digest, nil)
