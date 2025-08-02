@@ -4,8 +4,7 @@ local expect  = require "ccryptolib.internal.expect".expect
 local lassert = require "ccryptolib.internal.util".lassert
 local packing = require "ccryptolib.internal.packing"
 
-local numberlua = require "ccryptolib.internal.numberlua"
-local bit32 = numberlua.bit32
+local bit32 = bit32 or require "ccryptolib.internal.numberlua".bit32
 local rol = bit32.lrotate
 local shr = bit32.rshift
 local bxor = bit32.bxor

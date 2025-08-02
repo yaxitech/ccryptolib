@@ -5,7 +5,7 @@ local lassert = require "ccryptolib.internal.util".lassert
 local packing = require "ccryptolib.internal.packing"
 
 local unpack = unpack or table.unpack
-local bit32 = require "ccryptolib.internal.numberlua".bit32
+local bit32 = bit32 or require "ccryptolib.internal.numberlua".bit32
 local bxor = bit32.bxor
 local rol = bit32.lrotate
 local p16x4, fmt16x4 = packing.compilePack("<I4I4I4I4I4I4I4I4I4I4I4I4I4I4I4I4")
