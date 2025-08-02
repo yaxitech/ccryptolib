@@ -28,6 +28,12 @@ function arguments are well-formed and of the correct type.
     add_person("Caoimhin", { age = 23, gender = true }) -- error!
 ]]
 
+-- Use CC module directly, if available
+local ok, ccExpect = pcall(require, "cc.expect")
+if ok and ccExpect then
+    return ccExpect
+end
+
 local native_select, native_type = select, type
 
 local function get_type_names(...)
