@@ -90,4 +90,22 @@ describe("ed25519.verify", function()
 
         expect(ed25519.verify(pk, m, sig)):eq(false)
     end)
+
+    it("verifies YAXI system version", function()
+        local pk = util.hexcat {
+            "65bc4c21f59b2a4fd6b57d31448557e87b5bd115ef24c3d7528ca0c3ec6fb4e2"
+        }
+        local m = util.hexcat {
+            "72656c6561736531323032352d30372d31365431353a30383a31382e37373932",
+            "30323735332b30303a30306769746875623a79617869746563682f6e69786f73",
+            "2f38663463616336656631623662396162393862353933643661623639353365",
+            "383864353533346330971635c3ac31dc9d1e7a38a9e6b682a499b71c6c5c4701",
+            "7ae13e97c1d00ca32a00d92ec66a117ca82875e9a2bf928c27"
+        }
+        local sig = util.hexcat {
+            "966b42f0c698f86c8dba587e86061153fde68d011baefce40fce0f3f627c2499",
+            "281f98e2669914c604e4d569802ae0de89ef4b4f92a1689992424159f883520a",
+        }
+        expect(ed25519.verify(pk, m, sig)):eq(true)
+    end)
 end)
