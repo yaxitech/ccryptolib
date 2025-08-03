@@ -3,7 +3,7 @@
 local expect  = require "ccryptolib.internal.expect".expect
 local packing = require "ccryptolib.internal.packing"
 
-local bit32 = bit32 or require "ccryptolib.internal.numberlua".bit32
+local bit32 = require "ccryptolib.internal.bit32"
 local shl = bit32.lshift
 local shr = bit32.rshift
 local bxor = bit32.bxor
